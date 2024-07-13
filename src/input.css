@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@page {
+  size: 18.83in 11.77in;
+  margin: 0;
+  padding: 0;
+}
+
+.daily-heading {
+  @apply font-bold font-playfair text-4xl flex h-10mm items-center;
+}
+
+.weekly-day-heading {
+  @apply font-bold font-playfair text-2xl flex h-5mm items-center;
+}
+
+.mini-cal-day {
+  @apply font-black font-playfair text-2xl h-5mm items-center text-center;
+}
+
+.mini-cal-date {
+  @apply font-playfair text-2xl h-5mm items-center text-center;
+}
+
+.mini-cal-date-outside {
+  @apply mini-cal-date text-slate-300 dark:text-zinc-600;
+}
+
+.monthly-cal-day {
+  @apply flex-grow flex font-bold font-playfair text-2xl h-10mm items-end justify-center text-center pb-2;
+}
+
+.monthly-cal-date {
+  @apply font-bold font-playfair text-2xl border-t border-l border-slate-800 dark:border-zinc-400 pl-2 pb-2;
+}
+
+.monthly-cal .monthly-cal-date:nth-child(7n) {
+  @apply border-r;
+}
+
+.monthly-cal .monthly-cal-date:nth-last-child(-n + 7) {
+  @apply border-b;
+}
+
+.monthly-title {
+  @apply font-bold font-playfair text-4xl flex h-10mm items-center;
+}
+
+.annual-title {
+  @apply font-bold font-playfair text-8xl flex h-10mm items-center;
+}
+
+.area-header {
+  @apply font-bold font-playfair text-4xl flex h-5mm items-center;
+}
+
+.annual-goals-header {
+  @apply font-bold font-playfair text-8xl flex h-20mm items-center;
+}
+
+.weekly-goals-header {
+  @apply font-bold font-playfair text-4xl flex h-5mm;
+}
+
+.weekly-area-header {
+  @apply font-bold font-playfair text-3xl flex h-5mm items-center;
+}
+
+.reflection-header {
+  @apply font-bold font-playfair text-4xl flex h-5mm items-center;
+}
+
+.lines {
+  @apply border-b border-slate-800 dark:border-zinc-400;
+}
