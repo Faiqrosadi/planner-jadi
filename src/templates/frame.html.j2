@@ -1,9 +1,9 @@
 {{ content|safe }}
 <div class="column-sidebar sidebar-baru">
   {% if index_page %}
-  <a style="margin-left: -0.85px;z-index:13" class="index-ak" href="index-page"></a>
+  <a style="margin-left: -0.85px;z-index:13" class="index-ak" href="#index-page"></a>
   {% else %}
-  <a style="z-index:13" class="index-non" href="index-page"></a>
+  <a style="z-index:13" class="index-non" href="#index-page"></a>
   {% endif %}
   {% for sidebar_bulan in sidebar_bulan_list %}
   {% if date %}

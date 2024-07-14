@@ -592,6 +592,15 @@ h2 {
   /* Center horizontally */
 }
 
+.column-other {
+  width: 594px;
+  padding-top: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center horizontally */
+}
+
 .column-vision-board-yearly {
   width: 594px;
   padding-top: 16px;
