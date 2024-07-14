@@ -4,16 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Planner Generator</title>
+    <title>Planner Book by Larasnugh</title>
     <link rel="stylesheet" href="./main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/dc644d3ad5.js" crossorigin="anonymous"></script>
+    <link href="./fonts.css" rel="stylesheet">
   </head>
-  <body class="text-slate-800 dark:text-white dark:bg-zinc-800">
+  <body>
     {% for page in pages %}
       {{ page|safe }}
     {% endfor %}
+  <script>
+        document.querySelectorAll('.index-non').forEach(icon => {
+            fetch('icons/index-non.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.index-nonlong').forEach(icon => {
+            fetch('icons/index-nonlong.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.index-aklong').forEach(icon => {
+            fetch('icons/index-aklong.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.index-ak').forEach(icon => {
+            fetch('icons/index-ak.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+
+
+        document.querySelectorAll('.month-overview-index-icon').forEach(icon => {
+            fetch('icons/month-overview-index-icon.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.week-overview-index-icon').forEach(icon => {
+            fetch('icons/week-overview-index-icon.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.daily-overview-index-icon').forEach(icon => {
+            fetch('icons/daily-overview-index-icon.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.vision-board-index-icon').forEach(icon => {
+            fetch('icons/vision-board-index-icon.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.month-checkin-index-icon').forEach(icon => {
+            fetch('icons/month-checkin-index-icon.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.finance-index-icon').forEach(icon => {
+            fetch('icons/finance-index-icon.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        //notes template 
+        document.querySelectorAll('.notes-layout-1').forEach(icon => {
+            fetch('notes/notes-layout-1.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.notes-layout-2').forEach(icon => {
+            fetch('notes/notes-layout-2.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.notes-layout-3').forEach(icon => {
+            fetch('notes/notes-layout-3.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.notes-layout-4').forEach(icon => {
+            fetch('notes/notes-layout-4.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.notes-layout-5').forEach(icon => {
+            fetch('notes/notes-layout-5.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.notes-layout-6').forEach(icon => {
+            fetch('notes/notes-layout-6.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.notes-layout-7').forEach(icon => {
+            fetch('notes/notes-layout-7.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.notes-layout-8').forEach(icon => {
+            fetch('notes/notes-layout-8.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+        document.querySelectorAll('.notes-layout-9').forEach(icon => {
+            fetch('notes/notes-layout-9.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+
+        document.querySelectorAll('.project-arrow').forEach(icon => {
+            fetch('icons/project-arrow.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+
+        document.querySelectorAll('.corp').forEach(icon => {
+            fetch('icons/corp.svg')
+                .then(response => response.text())
+                .then(svg => {
+                    icon.innerHTML = svg;
+                });
+        });
+    </script>
   </body>
 </html>

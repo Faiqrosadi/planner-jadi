@@ -1,16 +1,55 @@
-<div class="w-gn-landscape max-h-gn-landscape break-after-page relative" id="{{ id }}">
-  <div class="m-6">
-  {{ content|safe }}
-  </div>
-  <div class="absolute bottom-0 right-0 text-slate-300 dark:text-zinc-600 text-2xl pr-6">  
-  {% if journal_link %}
-  <a href="#{{ journal_link }}"><i class="fa-solid fa-book pl-2"></i></a>
+{{ content|safe }}
+<div class="column-sidebar sidebar-baru">
+  {% if index_page %}
+  <a style="margin-left: -0.85px;z-index:13" class="index-ak" href="index-page"></a>
+  {% else %}
+  <a style="z-index:13" class="index-non" href="index-page"></a>
   {% endif %}
-  {% if goal_link %}
-  <a href="#{{ goal_link }}"><i class="fa-solid fa-bullseye pl-2"></i></a>
+  {% for sidebar_bulan in sidebar_bulan_list %}
+  {% if date %}
+    {% if sidebar_bulan[0][7] == date.strftime('%b').upper() %}
+    <a style="margin-left: -0.85px;z-index:999" class="svg-baru" href="#{{sidebar_bulan[0][8]}}-month-overview">
+      <div class="grid">
+          <div class="layer1 index-aklong">
+          </div>
+          <div class="layer2 flex items-center">
+              <div class="sidebar-text">
+                  <div style="color:#614F41; font-size:7.72px;">
+                      {{sidebar_bulan[0][7]}}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </a>
+  {% else %}
+  <a style="z-index:{{13 - loop.index}}" class="svg-baru" href="#{{sidebar_bulan[0][8]}}-month-overview">
+      <div class="grid">
+          <div class="layer1 index-nonlong"></div>
+          <div class="layer2 flex items-center">
+              <div class="sidebar-text">
+                  <div style="color:#A0907F; font-size:7.72px;text-align:center">{{sidebar_bulan[0][7]}}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </a>
   {% endif %}
-  {% if work_goal_link %}
-  <a href="#{{ work_goal_link }}"><i class="fa-solid fa-briefcase pl-2"></i></a>
-  {% endif %}
-  </div>
+  {% else %}
+  <a style="z-index:{{13 - loop.index}}" class="svg-baru" href="#{{sidebar_bulan[0][8]}}-month-overview">
+      <div class="grid">
+          <div class="layer1 index-nonlong"></div>
+          <div class="layer2 flex items-center">
+              <div class="sidebar-text">
+                  <div style="color:#A0907F; font-size:7.72px;text-align:center">{{sidebar_bulan[0][7]}}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </a>
+  {% endif%}
+  {% endfor %}
+</div>
+<div class="footer">
+    <div class="corp"></div>
+</div>
 </div>

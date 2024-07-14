@@ -1,0 +1,26 @@
+<div class="letter-page break-after-page relative" id="yearly-calendar">
+        <div class="column-main flex flex-col">
+            <h1>CALENDAR</h1>
+            <div class="calendar-element-grid grid-cols-3">
+                {% for mini_cal in mini_cal_list %}
+                <div class="calendar-element-page">
+                    <div class="judul-calendar-month">
+                    <a href="#{{mini_cal[0][8]}}-month-overview">{{mini_cal[0][5]}}</a>
+                    </div>
+                    <div class="inside-calendar-grid auto-cols-auto">
+                        <div class="week-calendar-grid grid-cols-1 auto-cols-auto">
+                            {% for i in range(5) %}
+                            <a class="font-calendar-week" href="#W{{loop.index}}-{{mini_cal[0][8]}}-week-overview">W{{loop.index}}</a>
+                            {% endfor %}
+                        </div>
+                        <div class="month-calendar-grid grid-cols-7 auto-cols-auto">
+                            {% for cal_date in mini_cal %}
+                            <a class="font-calendar-isian" href="{{cal_date[9]}}-day-overview">{{cal_date[0]}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        

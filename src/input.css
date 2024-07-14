@@ -2,78 +2,638 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 @page {
-  size: 18.83in 11.77in;
+  size: 612px 792px;
   margin: 0;
   padding: 0;
 }
 
-.daily-heading {
-  @apply font-bold font-playfair text-4xl flex h-10mm items-center;
+@layer base {
+  h1 {
+    @apply font-roundark text-center tracking-5;
+    font-weight: 400;
+    color: #614f41;
+    font-size: 28.53px;
+  }
+  h2 {
+    @apply font-roundark text-center tracking-5;
+    font-weight: 400;
+    color: #614f41;
+    font-size: 11.58px;
+  }
 }
 
-.weekly-day-heading {
-  @apply font-bold font-playfair text-2xl flex h-5mm items-center;
-}
+@layer components {
+  .letter-page {
+    @apply bg-[#F8F6F1] overflow-hidden flex;
+    width: 612px;
+    height: 792px;
+  }
+  .letter-page-margined {
+    @apply bg-[#F8F6F1] overflow-hidden flex;
+    margin-left: 19px;
+    margin-right: 19px;
+    width: 612px;
+    height: 792px;
+  }
 
-.mini-cal-day {
-  @apply font-black font-playfair text-2xl h-5mm items-center text-center;
-}
+  .column-main {
+    width: 594px;
+    padding-top: 28px;
+    padding-left: 2px;
+    padding-right: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+  }
 
-.mini-cal-date {
-  @apply font-playfair text-2xl h-5mm items-center text-center;
-}
+  .column-other {
+    width: 594px;
+    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+  }
 
-.mini-cal-date-outside {
-  @apply mini-cal-date text-slate-300 dark:text-zinc-600;
-}
+  .column-vision-board-yearly {
+    width: 594px;
+    padding-top: 16px; /* berbeda karena ada subheading */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+  }
 
-.monthly-cal-day {
-  @apply flex-grow flex font-bold font-playfair text-2xl h-10mm items-end justify-center text-center pb-2;
-}
+  .sidebar-baru {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px 0px;
+  }
 
-.monthly-cal-date {
-  @apply font-bold font-playfair text-2xl border-t border-l border-slate-800 dark:border-zinc-400 pl-2 pb-2;
-}
+  .svg-baru {
+    margin-top: -40.5px;
+  }
 
-.monthly-cal .monthly-cal-date:nth-child(7n) {
-  @apply border-r;
-}
+  .column-sidebar {
+    width: 17.43px;
+    @apply relative flex flex-col;
+  }
 
-.monthly-cal .monthly-cal-date:nth-last-child(-n + 7) {
-  @apply border-b;
-}
+  .svg-container {
+    display: flex;
+    flex-direction: column;
+  }
 
-.monthly-title {
-  @apply font-bold font-playfair text-4xl flex h-10mm items-center;
-}
+  .svg-item {
+    position: absolute;
+  }
+  .svg-item:nth-child(1) {
+    margin-top: 0px;
+    z-index: 13;
+  }
 
-.annual-title {
-  @apply font-bold font-playfair text-8xl flex h-10mm items-center;
-}
+  .svg-item:nth-child(2) {
+    z-index: 12;
+    top: 32px;
+  }
 
-.area-header {
-  @apply font-bold font-playfair text-4xl flex h-5mm items-center;
-}
+  .svg-item:nth-child(3) {
+    z-index: 11;
+    top: 94px; /* Adjust this value as needed */
+  }
 
-.annual-goals-header {
-  @apply font-bold font-playfair text-8xl flex h-20mm items-center;
-}
+  .svg-item:nth-child(4) {
+    z-index: 10;
+    top: 156px; /* Adjust this value as needed */
+  }
+  /* REPEAT UNTIL CHILD 13 WITH TOP IS ++60 */
+  .svg-item:nth-child(5) {
+    z-index: 9;
+    top: 219px;
+  }
+  .svg-item:nth-child(6) {
+    z-index: 8;
+    top: 281px;
+  }
+  .svg-item:nth-child(7) {
+    z-index: 7;
+    top: 343px;
+  }
+  .svg-item:nth-child(8) {
+    z-index: 6;
+    top: 406px;
+  }
+  .svg-item:nth-child(9) {
+    z-index: 5;
+    top: 468px;
+  }
+  .svg-item:nth-child(10) {
+    z-index: 4;
+    top: 530px;
+  }
+  .svg-item:nth-child(11) {
+    z-index: 3;
+    top: 593px;
+  }
+  .svg-item:nth-child(12) {
+    z-index: 2;
+    top: 655px;
+  }
+  .svg-item:nth-child(13) {
+    z-index: 1;
+    top: 717px;
+  }
 
-.weekly-goals-header {
-  @apply font-bold font-playfair text-4xl flex h-5mm;
-}
+  .letter-content {
+    @apply p-6;
+  }
 
-.weekly-area-header {
-  @apply font-bold font-playfair text-3xl flex h-5mm items-center;
-}
+  .letter-section {
+    @apply mb-6;
+  }
 
-.reflection-header {
-  @apply font-bold font-playfair text-4xl flex h-5mm items-center;
-}
+  .letter-heading {
+    @apply text-xl font-semibold mb-4;
+  }
 
-.lines {
-  @apply border-b border-slate-800 dark:border-zinc-400;
+  .letter-paragraph {
+    @apply text-gray-700;
+  }
+
+  .letter-list {
+    @apply list-disc list-inside text-gray-700;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 5px;
+    left: 48.5%;
+    transform: translateX(-50%); /* Center horizontally */
+  }
+
+  .footer2 {
+    position: absolute;
+    bottom: 15px;
+    left: 30%;
+    transform: translateX(-50%); /* Center horizontally */
+  }
+
+  .divider {
+    width: 100%;
+    border-top: 1px solid #614f41; /* Adjust the color and width as needed */
+    margin-top: 5px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 38px 93px;
+    margin-top: 25px;
+  }
+
+  .calendar-element-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 42.5px 39px;
+    margin-top: 48px;
+  }
+
+  .monthly-index-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 24px;
+    margin-top: 8px;
+  }
+  .others-notes-grid-index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 8px;
+    margin-top: 10px;
+  }
+  .yearly-grid-index {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 8px;
+    margin-top: 10px;
+  }
+
+  .grid-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+  }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px 40px;
+    margin-top: 50px;
+  }
+
+  .vision-edisibulan {
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    gap: 30px;
+    width: 100%;
+    margin-top: 13px;
+    margin-left: 0px;
+    margin-right: 7px;
+  }
+  .vision-edisibulan-element {
+    font-weight: 400;
+    font-size: 7.5px;
+    color: #a0907f;
+    font-family: "Action Sans", sans-serif;
+    @apply text-left tracking-5;
+  }
+
+  .month-hyperlink-horizontal {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 31.5px;
+    margin-top: 15px;
+  }
+  .month-hyperlink-horizontal-element {
+    font-weight: 400;
+    font-size: 7.5px;
+    color: #a0907f;
+    font-family: "Action Sans", sans-serif;
+    @apply text-center tracking-5;
+  }
+
+  .project-container {
+    width: 100%;
+    height: 16px;
+    border-bottom: 0.5px solid #a0907f;
+    display: flex;
+    align-items: center;
+  }
+
+  .monthly-index {
+    width: 95px;
+    height: 75px;
+  }
+
+  .calendar-element-page {
+    width: 153px;
+    height: 121px;
+  }
+
+  .projects-note-index {
+    width: 148px;
+    height: 184px;
+  }
+
+  .others-index {
+    width: 148px;
+    height: 87px;
+  }
+
+  .yearly-index {
+    width: 148px;
+    height: 47px;
+  }
+
+  .new-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px 40px;
+    margin-top: 50px;
+  }
+
+  .kolom-overview {
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px 27px;
+  }
+
+  .kolom-daily {
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px 23px;
+  }
+
+  .kolom-checkin {
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px 23px;
+  }
+
+  .index-tenggara {
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+    padding-right: 14.29px;
+    padding-left: 14.29px;
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    gap: 7px 26.83px;
+    background-color: #f1ebe5;
+  }
+
+  .new-grid .others-index:nth-child(1),
+  .new-grid .others-index:nth-child(2) {
+    grid-column: 1;
+  }
+
+  .new-grid .projects-note-index:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .new-grid .projects-note-index:nth-child(4) {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .inside-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-top: 9px;
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+
+  .month-calendar-grid {
+    display: grid;
+    gap: 7.6px 7.2px;
+  }
+
+  .week-calendar-grid {
+    min-width: 0;
+    display: grid;
+    gap: 7.6px;
+  }
+
+  .others-link-container {
+    width: 44px;
+    height: 20px;
+    background-color: #f1ebe5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .yearly-link-container {
+    width: 68;
+    height: 20px;
+    background-color: #f1ebe5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .regular-index {
+    font-size: 6.66px;
+    color: #614f41;
+    text-align: center;
+    font-family: "Action Sans";
+    @apply tracking-5;
+  }
+  .footer-font {
+    font-size: 4.55px;
+    color: #a0907f;
+    font-family: "Action Sans";
+    @apply tracking-5;
+  }
+
+  .font-calendar-week {
+    font-weight: bold;
+    font-size: 8.22px;
+    color: #614f41;
+    font-family: "Action Sans", sans-serif;
+  }
+
+  .font-calendar-isian {
+    font-weight: normal;
+    font-size: 8.22px;
+    color: #614f41;
+    font-family: "Action Sans", sans-serif;
+  }
+
+  .judul-calendar-month {
+    @apply font-roundark text-center tracking-5;
+    font-weight: 400;
+    color: #614f41;
+    font-size: 15px;
+  }
+
+  .subheading-vision-board {
+    margin-top: -10px;
+    font-weight: medium;
+    font-size: 14px;
+    color: #614f41;
+    font-family: "Action Sans", sans-serif;
+    @apply text-center tracking-10;
+  }
+
+  .vision-board-year-container {
+    margin-top: 10px;
+    width: 551px;
+    height: 666px;
+    border: 1px solid #614f41;
+  }
+
+  .vision-board-month-container {
+    margin-top: 37px;
+    width: 100%;
+    height: 666px;
+    border: 1px solid #614f41;
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+
+  .column-main-kolom3 {
+    width: 594px;
+    padding-top: 15px;
+    padding-left: 19px;
+    padding-right: 19px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .isian-index-kolom1 {
+    font-weight: bold;
+    font-size: 7.72px;
+    color: #614f41;
+    font-family: "Action Sans", sans-serif;
+    @apply text-left;
+  }
+  .isian-index-kolom3 {
+    font-weight: normal;
+    font-size: 7.72px;
+    color: #614f41;
+    font-family: "Action Sans", sans-serif;
+    @apply text-center;
+  }
+
+  .isian-index-kolom5 {
+    font-weight: normal;
+    font-size: 7.72px;
+    color: #a0907f;
+    font-family: "Action Sans", sans-serif;
+    @apply text-right;
+  }
+
+  .isian-index-bawah {
+    font-weight: normal;
+    font-size: 7.72px;
+    color: #614f41;
+    font-family: "Action Sans", sans-serif;
+    @apply text-center tracking-5;
+  }
+
+  .isian-index-bawah-samping {
+    font-weight: normal;
+    font-size: 7.72px;
+    color: #a0907f;
+    font-family: "Action Sans", sans-serif;
+    @apply text-center tracking-5;
+  }
+
+  .index-kolom1 {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    height: 18px;
+    margin-top: 6px;
+  }
+
+  .index-kolom3 {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    height: 12px;
+    margin-top: 9px;
+  }
+
+  .index-kolom2 {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 94px;
+    margin-left: 42px;
+    margin-top: 9px;
+  }
+
+  .index-bawah {
+    display: grid;
+    grid-template-columns: repeat(31, 1fr);
+    gap: 0px 8px;
+    width: 541px;
+    height: 17px;
+    padding-left: 4.73px;
+    padding-right: 4.73px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    background-color: #f1ebe5;
+
+    text-align: center;
+    justify-content: center;
+  }
+
+  .date-container {
+    padding-left: 2.5px;
+    display: flex;
+    width: 145px;
+    height: auto;
+    background-color: #f1ebe5;
+    align-items: center;
+  }
+
+  .month-reflection-grid {
+    padding-top: 37px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 21px 22.39px;
+    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .month-reflection-container {
+    height: 150px;
+    padding-top: 9px;
+    background-color: #f1ebe5;
+    border-top: 1px solid #614f41;
+  }
+
+  .index-kolom5 {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    width: 140px;
+    margin-left: 45px;
+    height: 12px;
+    margin-top: 9px;
+  }
+
+  .header-kolom3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .atas-container {
+    margin-top: 35px;
+    width: 100%; /* Adjust width as needed */
+    max-width: 400px; /* Maximum width of the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .checkin-container {
+    margin-top: 42px;
+    width: 100%; /* Adjust width as needed */
+    max-width: 400px; /* Maximum width of the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .month-overview-container {
+    margin-top: 22px;
+    width: 100%; /* Adjust width as needed */
+    max-width: 400px; /* Maximum width of the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .month-finance-container {
+    margin-top: 20px;
+    width: 100%; /* Adjust width as needed */
+    max-width: 400px; /* Maximum width of the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .week-container {
+    margin-top: 35px;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .meal-container {
+    margin-top: 20px;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .scale-svg {
+    width: 20%;
+    height: auto;
+    border: 1px solid black;
+  }
+
+  .bawah-container {
+    display: inline-block; /* Ensures it doesn't disturb block elements */
+    width: 100%; /* Adjust width as needed */
+    max-width: 200px; /* Maximum width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100px;
+  }
+
+  .layer1,
+  .layer2 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .sidebar-text {
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%) rotate(90deg);
+  }
 }

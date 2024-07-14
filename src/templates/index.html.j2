@@ -1,0 +1,82 @@
+<div class="letter-page break-after-page relative">
+<div class="column-main flex flex-col" id="index-page">
+            <h1>INDEX</h1>
+            <div class="grid grid-cols-3">
+                {% for mini_cal in mini_cal_list %}
+                <div class="monthly-index">
+                    <h2>{{mini_cal[0][5]}}</h2>
+                    <div class="monthly-index-grid grid-cols-3">
+                        <a class="month-overview-index-icon" href="#{{mini_cal[0][8]}}-month-overview"></a>
+                        <a class="week-overview-index-icon" href="#W{{loop.index}}-{{mini_cal[0][8]}}-week-overview"></a>
+                        <a class="daily-overview-index-icon" href="#{{mini_cal[0][9]}}-day-overview"></a>
+                        <a class="vision-board-index-icon" href="#{{mini_cal[0][8]}}-vision"></a>
+                        <a class="month-checkin-index-icon" href="#{{mini_cal[0][8]}}-checkin"></a>
+                        <a class="finance-index-icon" href="#{{mini_cal[0][8]}}-finance"></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="new-grid grid-cols-custom">
+                <div class="others-index">
+                    <h2>OTHERS</h2>
+                    <div class="divider"></div>
+                    <div class="others-notes-grid-index grid-cols-3">
+                        <a class="others-link-container" href="#other-password">
+                            <p class="regular-index">PASSWORD</p>
+                        </a>
+                        <a class="others-link-container" href="#other-accounts">
+                            <p class="regular-index">ACCOUNTS</p>
+                        </a>
+                        <a class="others-link-container" href="#other-cleaning">
+                            <p class="regular-index">CLEANING</p>
+                        </a>
+                        <a class="others-link-container" href="#other-skincare">
+                            <p class="regular-index">SKINCARE</p>
+                        </a>
+                        <a class="others-link-container" href="#other-album1">
+                            <p class="regular-index">ALBUM</p>
+                        </a>
+                        <a class="others-link-container" href="#other-habit">
+                            <p class="regular-index">HABIT</p>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="yearly-index">
+                    <h2>YEARLY</h2>
+                    <div class="divider"></div>
+                    <div class="yearly-grid-index grid-cols-2">
+                        <a class="yearly-link-container" href="#yearly-calendar">
+                            <p class="regular-index">CALENDAR</p>
+                        </a>
+                        <a class="yearly-link-container" href="#yearly-vision">
+                            <p class="regular-index">VISION BOARD</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="projects-note-index">
+                    <h2>PROJECT PLANNER</h2>
+                    <div class="divider"></div>
+                    {% for i in range(10)%}
+                    <a class="project-container" href="#pp{{loop.index}}">
+                        <div class="project-arrow"></div>
+                    </a>
+                    {% endfor%}
+                </div>
+                <div class="projects-note-index">
+                    <h2>NOTES TEMPLATE</h2>
+                    <div class="divider"></div>
+                    <div class="others-notes-grid-index grid-cols-3">
+                        <a class="notes-layout-1" href="#other-tl1"></a>
+                        <a class="notes-layout-2" href="#other-tl2"></a>
+                        <a class="notes-layout-3" href="#other-tl3"></a>
+                        <a class="notes-layout-4" href="#other-tl4"></a>
+                        <a class="notes-layout-5" href="#other-tl5"></a>
+                        <a class="notes-layout-6" href="#other-tl6"></a>
+                        <a class="notes-layout-7" href="#other-tl7"></a>
+                        <a class="notes-layout-8" href="#other-tl8"></a>
+                        <a class="notes-layout-9" href="#other-tl9"></a>
+                    </div>
+                </div>
+            </div>
+        </div>

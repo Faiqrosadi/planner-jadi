@@ -74,11 +74,11 @@
         <div class="mini-cal-day">s</div>
         {% for cal_date in mini_cal %}
         {% if cal_date[2] %}
-        {% if cal_date[1] == date.strftime('%Y-%m-%d') %}
-        <div class="mini-cal-date"><div class="bg-slate-200 dark:bg-zinc-700 aspect-square h-full rounded-full mx-auto"><a href="#{{ cal_date[1] }}">{{ cal_date[0] }}</a></div></div>
-        {% else %}
-        <div class="mini-cal-date"><a href="#{{ cal_date[1] }}">{{ cal_date[0] }}</a></div>
-        {% endif %}
+          {% if cal_date[1] == date.strftime('%Y-%m-%d') %}
+          <div class="mini-cal-date"><div class="bg-slate-200 dark:bg-zinc-700 aspect-square h-full rounded-full mx-auto"><a href="#{{ cal_date[1] }}">{{ cal_date[0] }}</a></div></div>
+          {% else %}
+          <div class="mini-cal-date"><a href="#{{ cal_date[1] }}">{{ cal_date[0] }}</a></div>
+          {% endif %}
         {% else %}
         <div class="mini-cal-date text-slate-300 dark:text-zinc-600"><a href="#{{ cal_date[1] }}">{{ cal_date[0] }}</a></div>
         {% endif %}
