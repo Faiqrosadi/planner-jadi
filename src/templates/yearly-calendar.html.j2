@@ -15,7 +15,7 @@
                         </div>
                         <div class="month-calendar-grid grid-cols-7 auto-cols-auto">
                             {% for cal_date in mini_cal %}
-                            <a class="font-calendar-isian" href="{{cal_date[9]}}-day-overview">{{cal_date[0]}}</a>
+                            <a class="font-calendar-isian" href="#{{cal_date[0]}}-{{cal_date[9]}}-day-overview">{{cal_date[0]}}</a>
                             {% endfor %}
                         </div>
                     </div>

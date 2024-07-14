@@ -1,0 +1,28 @@
+   <div class="letter-page break-after-page relative" id="{{ month.strftime('%B').lower() }}-finance">
+        <div class="column-main-kolom3 flex flex-col">
+            <div class="header-kolom3">
+                <h1 style="font-size:19px; text-align:left">{{ month.strftime('%B').upper() }}</h1>
+                <div class="index-kolom3">
+                    <a class="isian-index-kolom3" href="#{{ month.strftime('%B').lower() }}-reflection">
+                        REFLECTION
+                    </a>
+                    <div class="
+                        isian-index-kolom3">|</div>
+                    <a class="
+                        isian-index-kolom3" href="{{ month.strftime('%B').lower() }}-vision">VISION BOARD</a>
+                    <div class="
+                        isian-index-kolom3">|</div>
+                    <a style="font-weight: bold;" class="
+                        isian-index-kolom3" href="{{ month.strftime('%B').lower() }}-finance">FINANCE</a>
+                </div>
+
+                <div class="index-kolom5">
+                    {% for i in range(5)%}
+                    <a class="isian-index-kolom5" href="#W{{loop.index}}-{{ month.strftime('%B').lower()}}-week-overview">W{{loop.index}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="month-finance-container">
+                <div class="finance"></div>
+            </div>
+        </div>

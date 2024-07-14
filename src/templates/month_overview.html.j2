@@ -1,0 +1,39 @@
+    <div class="letter-page break-after-page relative" id="{{month.strftime('%B').lower()}}-month-overview">
+        <div class="column-main-kolom3 flex flex-col">
+            <div class="header-kolom3">
+                <h1 style="font-size:19px; text-align:left">{{ month.strftime('%B').upper() }}</h1>
+                <div class="index-kolom3">
+                    <a class="isian-index-kolom3"  href="#{{ month.strftime('%B').lower() }}-reflection">
+                        REFLECTION
+                    </a>
+                    <div class="
+                        isian-index-kolom3">|</div>
+                    <a class="
+                        isian-index-kolom3"  href="#{{ month.strftime('%B').lower() }}-vision">VISION BOARD</a>
+                    <div class="
+                        isian-index-kolom3">|</div>
+                    <a class="
+                        isian-index-kolom3"  href="#{{ month.strftime('%B').lower() }}-finance">FINANCE</a>
+                </div>
+
+                <div class="index-kolom5">
+                    {% for i in range(5)%}
+                    <a class="isian-index-kolom5" href="#W{{loop.index}}-{{ month.strftime('%B').lower()}}-week-overview">W{{loop.index}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="month-overview-container">
+                <div class="atas-month-overview"></div>
+            </div>
+            <div style="margin-left: 17px;">
+                <div class="bawah-container flex-col flex">
+                    <div class="index-bawah">
+                        {% for cal_date in mini_cal %}
+                        <a class="isian-index-bawah" href="#{{cal_date[0]}}-{{cal_date[9]}}-day-overview">{{cal_date[0]}}</a>
+                        {% endfor %}
+                    </div>
+                    <div style="margin-top: 12px;" class="bawah-month-overview"></div>
+                </div>
+
+            </div>
+        </div>

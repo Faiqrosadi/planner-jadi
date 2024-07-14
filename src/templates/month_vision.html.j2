@@ -1,0 +1,36 @@
+    <div class="letter-page break-after-page relative" id="{{ month.strftime('%B').lower() }}-vision">
+        <div class="column-main-kolom3 flex flex-col">
+            <div class="header-kolom3">
+                <h1 style="font-size:19px; text-align:left">{{ month.strftime('%B').upper() }}</h1>
+                <div class="index-kolom3">
+                    <a class="isian-index-kolom3"  href="#{{ month.strftime('%B').lower() }}-reflection">
+                        REFLECTION
+                    </a>
+                    <div class="
+                        isian-index-kolom3">|</div>
+                    <a style="font-weight: bold;" class="
+                        isian-index-kolom3"  href="#{{ month.strftime('%B').lower() }}-vision">VISION BOARD</a>
+                    <div class="
+                        isian-index-kolom3">|</div>
+                    <a class="
+                        isian-index-kolom3"  href="#{{ month.strftime('%B').lower() }}-finance">FINANCE</a>
+                </div>
+
+                <div class="index-kolom5">
+                    {% for i in range(5)%}
+                    <a class="isian-index-kolom5" href="#W{{loop.index}}-{{ month.strftime('%B').lower()}}-week-overview">W{{loop.index}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="vision-board-month-container">
+            </div>
+            <div class="vision-edisibulan grid-cols-12">
+                {% for sidebar_bulan in sidebar_bulan_list %}
+                {% if sidebar_bulan[0][7] == month.strftime('%b').upper() %}
+                <a style="font-weight: bold;color:#614F41" class="vision-edisibulan-element" href="#{{sidebar_bulan[0][8]}}-vision" >{{sidebar_bulan[0][7]}}</a>
+                {% else %}
+                <a class="vision-edisibulan-element" href="#{{sidebar_bulan[0][8]}}-vision" >{{sidebar_bulan[0][7]}}</a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
