@@ -755,6 +755,38 @@ h2 {
   margin-top: 50px;
 }
 
+.kolom-overview {
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 27px;
+}
+
+.kolom-daily {
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 23px;
+}
+
+.kolom-checkin {
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 23px;
+}
+
+.index-tenggara {
+  padding-top: 6.5px;
+  padding-bottom: 6.5px;
+  padding-right: 14.29px;
+  padding-left: 14.29px;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  gap: 7px 26.83px;
+  background-color: #f1ebe5;
+}
+
 .new-grid .others-index:nth-child(1),
   .new-grid .others-index:nth-child(2) {
   grid-column: 1;
@@ -873,6 +905,14 @@ h2 {
   flex-direction: column;
 }
 
+.isian-index-kolom1 {
+  font-weight: bold;
+  font-size: 7.72px;
+  color: #614f41;
+  font-family: "Action Sans", sans-serif;
+  text-align: left;
+}
+
 .isian-index-kolom3 {
   font-weight: normal;
   font-size: 7.72px;
@@ -898,10 +938,34 @@ h2 {
   letter-spacing: 0.05em;
 }
 
+.isian-index-bawah-samping {
+  font-weight: normal;
+  font-size: 7.72px;
+  color: #a0907f;
+  font-family: "Action Sans", sans-serif;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.index-kolom1 {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  height: 18px;
+  margin-top: 6px;
+}
+
 .index-kolom3 {
   display: grid;
   grid-template-columns: repeat(5, auto);
   height: 12px;
+  margin-top: 9px;
+}
+
+.index-kolom2 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 94px;
+  margin-left: 42px;
   margin-top: 9px;
 }
 
@@ -918,6 +982,15 @@ h2 {
   background-color: #f1ebe5;
   text-align: center;
   justify-content: center;
+}
+
+.date-container {
+  padding-left: 2.5px;
+  display: flex;
+  width: 145px;
+  height: auto;
+  background-color: #f1ebe5;
+  align-items: center;
 }
 
 .month-reflection-grid {
@@ -961,6 +1034,16 @@ h2 {
   /* Maintain aspect ratio */
 }
 
+.checkin-container {
+  margin-top: 42px;
+  width: 100%;
+  /* Adjust width as needed */
+  max-width: 400px;
+  /* Maximum width of the container */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
 .month-overview-container {
   margin-top: 22px;
   width: 100%;
@@ -977,6 +1060,13 @@ h2 {
   /* Adjust width as needed */
   max-width: 400px;
   /* Maximum width of the container */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.meal-container {
+  margin-top: 20px;
+  width: 100%;
   height: auto;
   /* Maintain aspect ratio */
 }

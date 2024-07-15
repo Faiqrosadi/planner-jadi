@@ -2,6 +2,7 @@ import jinja2 as j2
 from datetime import date, timedelta, datetime
 from dateutil.relativedelta import relativedelta
 from argparse import ArgumentParser, BooleanOptionalAction
+import calendar
 '''
   %d = 01 hari
   %-d = 1
@@ -59,15 +60,20 @@ def build_monthly_pages(start: date, end: date, j2_env: j2.Environment):
   sidebar_bulan_list = []
   for i in range(12):
     sidebar_bulan_list.append(mini_calendar_dates(i + 1, start.year))
-
+  
   cur_month = start + relativedelta(months=+0)
   month_templates = {}
   month_overview_template = j2_env.get_template('month_overview.html.j2')
   month_reflection_template = j2_env.get_template('month_reflection.html.j2')
   month_vision_template = j2_env.get_template('month_vision.html.j2')
   month_finance_template = j2_env.get_template('month_finance.html.j2')
-  frame_template = j2_env.get_template('frame.html.j2')
+  week_overview_template = j2_env.get_template('week_overview.html.j2')
+  week_checkin_template = j2_env.get_template('week_checkin.html.j2')
+  week_meal_template = j2_env.get_template('week_meal.html.j2')
+  day_overview_template = j2_env.get_template('day_overview.html.j2')
+  day_checkin_template = j2_env.get_template('day_checkin.html.j2')
 
+  frame_template = j2_env.get_template('frame.html.j2')
   while cur_month <= end:
     content = build_monthly_page(cur_month, month_overview_template)
     month_templates[cur_month.strftime('%Y-%m')+'-month-overview'] = frame_template.render(
@@ -100,7 +106,46 @@ def build_monthly_pages(start: date, end: date, j2_env: j2.Environment):
       index_page=False,
       sidebar_bulan_list=sidebar_bulan_list
     )
-
+    for i in range(5):
+      content =week_overview_template.render(month=cur_month, iter=i, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
+      month_templates['W' + str(i) + '-' + cur_month.strftime('%m')+'-week-overview'] = frame_template.render(
+        content=content,
+        date=cur_month,
+        index_page=False,
+        sidebar_bulan_list=sidebar_bulan_list
+      )
+      content =week_checkin_template.render(month=cur_month, iter=i, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
+      month_templates['W' + str(i) + '-' + cur_month.strftime('%m')+'-week-checkin'] = frame_template.render(
+        content=content,
+        date=cur_month,
+        index_page=False,
+        sidebar_bulan_list=sidebar_bulan_list
+      )
+      content =week_meal_template.render(month=cur_month, iter=i, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
+      month_templates['W' + str(i) + '-' + cur_month.strftime('%m')+'-week-meal'] = frame_template.render(
+        content=content,
+        date=cur_month,
+        index_page=False,
+        sidebar_bulan_list=sidebar_bulan_list
+      )
+    # modify the code for loop 
+    days_in_month = calendar.monthrange(cur_month.year, cur_month.month)[1]
+    for i in range(0, days_in_month):
+      cur_date = start + timedelta(days=i)
+      content =day_overview_template.render(month=cur_date, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
+      month_templates['W' + str(i) + '-' + cur_month.strftime('%m')+'-day-overview'] = frame_template.render(
+        content=content,
+        date=cur_month,
+        index_page=False,
+        sidebar_bulan_list=sidebar_bulan_list
+      )
+      content =day_checkin_template.render(month=cur_date, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
+      month_templates['W' + str(i) + '-' + cur_month.strftime('%m')+'-day-checkin'] = frame_template.render(
+        content=content,
+        date=cur_month,
+        index_page=False,
+        sidebar_bulan_list=sidebar_bulan_list
+      )
     cur_month += relativedelta(months=+1)
 
   return month_templates
@@ -208,7 +253,7 @@ def build_other_pages(start:date, j2_env: j2.Environment):
   build_frame('tl7-page', tl7_template)
   build_frame('tl9-page', tl9_template)
   return annual_templates
-
+            
 if __name__ == "__main__":
   parser = ArgumentParser(prog='Python Planner Generator',
                           description='GoodNotes 5 Optimized PDF Planner')
@@ -229,16 +274,54 @@ if __name__ == "__main__":
 
   start_date = date.fromisoformat(args.start)
   end_date = date.fromisoformat(args.end)
+  annual_pages = build_annual_pages(start_date, end_date, env)
 
-  start_time = datetime(2022, 12, 26, args.start_time, 0, 0)
-  end_time = datetime(2022, 12, 26, args.end_time, 0, 0)
+  # start_time = datetime(2022, 12, 26, args.start_time, 0, 0)
+  # end_time = datetime(2022, 12, 26, args.end_time, 0, 0)
 
   pages = []
+  others = []
+  # months_jan = []
+  
 
   pages.extend(build_annual_pages(start_date, end_date, env).values())
-  pages.extend(build_monthly_pages(start_date, end_date, env).values())
-  pages.extend(build_other_pages(start_date, env).values())
+  # months_jan.extend(build_monthly_pages(start_date, end_date, env).values())
+  others.extend(build_other_pages(start_date, env).values())
 
   planner = build_planner(pages, env)
+  others_planner = build_planner(others, env)
+  # months_jan = build_planner(months_jan, env)
 
-  generate_html(planner, f'./dest/index{args.file_suffix}.html')
+  cur_month = start_date + relativedelta(months=+0)
+  while cur_month <= end_date:
+    def export_month(cur_month, j2_template: j2.Template):
+      return j2_template.render(month=cur_month, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
+    months = []
+    months_planner = {} # harusnya di dalam loop 
+    months.extend(build_monthly_pages(cur_month, cur_month, env).values())
+    months_planner = build_planner(months, env)
+    judul = cur_month.strftime('%m')
+    generate_html(months_planner, f'./dest/index_{judul}.html')
+    months = []
+    cur_month += relativedelta(months=+1)
+
+  generate_html(planner, f'./dest/index' + '_tahun.html')
+  generate_html(others_planner, f'./dest/index' + '_others.html')
+  # generate_html(months_jan, f'./dest/index' + '_jan.html')
+
+import asyncio
+from pyppeteer import launch
+
+async def generate_pdf(url, pdf_path):
+    browser = await launch()
+    page = await browser.newPage()
+    
+    await page.goto(url)
+    await asyncio.sleep(15)
+    
+    await page.pdf({'path': pdf_path, 'format': 'Letter'})
+    
+    await browser.close()
+
+# Run the function
+asyncio.get_event_loop().run_until_complete(generate_pdf('https://zany-enigma-6w57qr95p9gfxv5g-5502.app.github.dev/dest/index.html', 'example.pdf'))

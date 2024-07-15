@@ -1,14 +1,14 @@
-    <div class="letter-page break-after-page relative" id="W{{iter+1}}-{{ month.strftime('%B').lower()}}-week-overview">
+    <div class="letter-page break-after-page relative" id="W{{iter+1}}-{{ month.strftime('%B').lower()}}-week-checkin">
         <div class="column-main-kolom3 flex flex-col">
             <div class="header-kolom3">
-                <h1 style="font-size:19px; text-align:left">{{ month.strftime('%B').upper() }}</h1>
+                <h1 style="font-size:19px; text-align:left">JANUARY</h1>
                 <div class="index-kolom3">
-                    <a style="font-weight: bold;" class="isian-index-kolom3" href="#W{{iter+1}}-{{ month.strftime('%B').lower()}}-week-overview">
+                    <a class="isian-index-kolom3" href="#W{{iter+1}}-{{ month.strftime('%B').lower()}}-week-overview">
                         OVERVIEW
                     </a>
                     <div class="
                         isian-index-kolom3">|</div>
-                    <a class="
+                    <a style="font-weight: bold;" class="
                         isian-index-kolom3" href="#W{{iter+1}}-{{ month.strftime('%B').lower()}}-week-checkin">CHECK-IN</a>
                     <div class="
                         isian-index-kolom3">|</div>
@@ -26,16 +26,8 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="kolom-overview">
-                <div style="padding-top: 13px;" class="kiri-week-overview "></div>
-                <div>
-                    <div class="kanan-week-overview"></div>
-                    <div class="index-tenggara">
-                        {% for cal_date in mini_cal %}
-                        <a class="isian-index-bawah-samping"  href="#{{cal_date[0]}}-{{cal_date[9]}}-day-overview">{{cal_date[0]}}</a>
-                        {% endfor %}
-                    </div>
-                </div>
+            <div class="atas-container">
+                <div class="week-checkin"></div>
             </div>
 
         </div>
