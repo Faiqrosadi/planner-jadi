@@ -90,7 +90,18 @@
     margin-top: 0px;
     z-index: 13;
   }
-
+  .kotak-non {
+    width: 15.44px;
+    height: 73.36px;
+    background-color: #f1ebe5;
+    border-radius: 0px 30px 30px 0px;
+  }
+  .kotak-ak {
+    width: 15.44px;
+    height: 73.36px;
+    background-color: #f8f6ef;
+    border-radius: 0px 30px 30px 0px;
+  }
   .svg-item:nth-child(2) {
     z-index: 12;
     top: 32px;
@@ -315,21 +326,19 @@
   }
 
   .kolom-checkin {
-    padding-top: 25px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0px 23px;
+    position: absolute;
+    bottom: 17px;
+    left: 72%;
+    transform: translateX(-50%);
   }
 
   .index-tenggara {
-    padding-top: 6.5px;
     padding-bottom: 6.5px;
     padding-right: 14.29px;
     padding-left: 14.29px;
     display: grid;
     grid-template-columns: repeat(7, auto);
-    gap: 7px 26.83px;
-    background-color: #f1ebe5;
+    gap: 7px 28px;
   }
 
   .new-grid .others-index:nth-child(1),
@@ -570,6 +579,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  .footer-teks {
+    font-weight: medium;
+    font-size: 4.55px;
+    color: #614f41;
+    font-family: "Action Sans", sans-serif;
+    @apply text-center tracking-5;
+  }
 
   .atas-container {
     margin-top: 35px;
@@ -579,7 +595,14 @@
   }
 
   .checkin-container {
-    margin-top: 42px;
+    margin-top: 30px;
+    width: 100%; /* Adjust width as needed */
+    max-width: 400px; /* Maximum width of the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .checkin2-container {
+    margin-top: 45px;
     width: 100%; /* Adjust width as needed */
     max-width: 400px; /* Maximum width of the container */
     height: auto; /* Maintain aspect ratio */
@@ -635,5 +658,28 @@
     position: absolute;
     left: 45%;
     transform: translateX(-50%) rotate(90deg);
+  }
+  .sidebar-cont {
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+  .kotak-aktif {
+    width: 73.36px;
+    height: 15.44px;
+    background-color: #f8f6ef;
+  }
+  .kotak-non-aktif {
+    width: 73.36px;
+    height: 15.44px;
+    background-color: #eae0d6;
+  }
+
+  .svg-baru-banget {
+    margin-top: 62.5px;
+  }
+  .grid-baru {
+    display: grid;
+    margin-top: -40px;
   }
 }

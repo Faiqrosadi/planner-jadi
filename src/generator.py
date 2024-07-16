@@ -30,7 +30,7 @@ def mini_calendar_dates(month, year):
         if current_day.month == month:
             date_list.append((
                 current_day.strftime('%d'),  # Use '%d' for two-digit day
-                current_day.strftime('%m-%d'), 
+                current_day.strftime('%d-%m'), 
                 True,  # cur_month is always True for the current month
                 current_day.strftime('W%U'),  # Week number with leading zero (from Sunday)
                 current_day.strftime('%Y-W%U'), 
@@ -132,14 +132,14 @@ def build_monthly_pages(start: date, end: date, j2_env: j2.Environment):
     days_in_month = calendar.monthrange(cur_month.year, cur_month.month)[1]
     for i in range(0, days_in_month):
       cur_date = start + timedelta(days=i)
-      content =day_overview_template.render(month=cur_date, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
+      content =day_overview_template.render(month=cur_date, bulan=cur_month, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
       month_templates['W' + str(i) + '-' + cur_month.strftime('%m')+'-day-overview'] = frame_template.render(
         content=content,
         date=cur_month,
         index_page=False,
         sidebar_bulan_list=sidebar_bulan_list
       )
-      content =day_checkin_template.render(month=cur_date, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
+      content =day_checkin_template.render(month=cur_date, bulan=cur_month, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
       month_templates['W' + str(i) + '-' + cur_month.strftime('%m')+'-day-checkin'] = frame_template.render(
         content=content,
         date=cur_month,
@@ -282,46 +282,46 @@ if __name__ == "__main__":
   pages = []
   others = []
   # months_jan = []
-  
+  full = []
 
-  pages.extend(build_annual_pages(start_date, end_date, env).values())
-  # months_jan.extend(build_monthly_pages(start_date, end_date, env).values())
-  others.extend(build_other_pages(start_date, env).values())
+  full.extend(build_annual_pages(start_date, end_date, env).values())
+  full.extend(build_monthly_pages(start_date, end_date, env).values())
+  full.extend(build_other_pages(start_date, env).values())
 
-  planner = build_planner(pages, env)
-  others_planner = build_planner(others, env)
+  planner = build_planner(full, env)
+  # others_planner = build_planner(others, env)
   # months_jan = build_planner(months_jan, env)
 
-  cur_month = start_date + relativedelta(months=+0)
-  while cur_month <= end_date:
-    def export_month(cur_month, j2_template: j2.Template):
-      return j2_template.render(month=cur_month, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
-    months = []
-    months_planner = {} # harusnya di dalam loop 
-    months.extend(build_monthly_pages(cur_month, cur_month, env).values())
-    months_planner = build_planner(months, env)
-    judul = cur_month.strftime('%m')
-    generate_html(months_planner, f'./dest/index_{judul}.html')
-    months = []
-    cur_month += relativedelta(months=+1)
+  # cur_month = start_date + relativedelta(months=+0)
+  # while cur_month <= end_date:
+  #   def export_month(cur_month, j2_template: j2.Template):
+  #     return j2_template.render(month=cur_month, mini_cal=mini_calendar_dates(cur_month.month, cur_month.year))
+  #   months = []
+  #   months_planner = {} # harusnya di dalam loop 
+  #   months.extend(build_monthly_pages(cur_month, cur_month, env).values())
+  #   months_planner = build_planner(months, env)
+  #   judul = cur_month.strftime('%m')
+  #   generate_html(months_planner, f'./dest/index_{judul}.html')
+  #   months = []
+  #   cur_month += relativedelta(months=+1)
 
-  generate_html(planner, f'./dest/index' + '_tahun.html')
-  generate_html(others_planner, f'./dest/index' + '_others.html')
+  generate_html(planner, f'./dest/index.html')
+  # generate_html(others_planner, f'./dest/index' + '_others.html')
   # generate_html(months_jan, f'./dest/index' + '_jan.html')
 
-import asyncio
-from pyppeteer import launch
+# import asyncio
+# from pyppeteer import launch
 
-async def generate_pdf(url, pdf_path):
-    browser = await launch()
-    page = await browser.newPage()
+# async def generate_pdf(url, pdf_path):
+#     browser = await launch()
+#     page = await browser.newPage()
     
-    await page.goto(url)
-    await asyncio.sleep(15)
+#     await page.goto(url)
+#     await asyncio.sleep(15)
     
-    await page.pdf({'path': pdf_path, 'format': 'Letter'})
+#     await page.pdf({'path': pdf_path, 'format': 'Letter'})
     
-    await browser.close()
+#     await browser.close()
 
-# Run the function
-asyncio.get_event_loop().run_until_complete(generate_pdf('https://zany-enigma-6w57qr95p9gfxv5g-5502.app.github.dev/dest/index.html', 'example.pdf'))
+# # Run the function
+# asyncio.get_event_loop().run_until_complete(generate_pdf('http://127.0.0.1:5500/dest/index.html', 'example.pdf'))

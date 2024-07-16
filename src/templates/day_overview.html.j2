@@ -1,9 +1,9 @@
-    <div class="letter-page break-after-page relative" id="{{month.strftime('%d-%m')}}-day-overview">
+    <div class="letter-page break-after-page relative" id="{{month.strftime('%d')}}-{{bulan.strftime('%m')}}-day-overview">
         <div class="column-main-kolom3 flex flex-col">
             <div class="header-kolom3">
                 <div class="index-kolom1">
                     <div class="date-container">
-                        <div class="isian-index-kolom1">DATE:  </div>
+                        <div class="isian-index-kolom1">DATE:</div>
                     </div>
                 </div>
                 <div class="index-kolom2">
@@ -12,7 +12,8 @@
                     </a>
                     <div class="
                         isian-index-kolom3">|</div>
-                    <a class="isian-index-kolom3" href="#{{month.strftime('%d-%m')}}-day-checkin">CHECK-IN</a>
+                    <a class="
+                        isian-index-kolom3" href="#{{month.strftime('%d-%m')}}-day-checkin">CHECK-IN</a>
                 </div>
                 <div class="index-kolom5">
                     {% for i in range(5)%}
@@ -20,11 +21,11 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="kolom-daily">
-                <div style="padding-top: 2px;" class="kiri-daily-overview"></div>
-                <div>
-                    <div style="padding-top: 6px;" class="kanan-daily-overview"></div>
-                    <div class="index-tenggara">
+            <div class="checkin-container">
+                <div class="whole-overview"></div>
+            </div>
+            <div class="kolom-checkin">
+                <div class="index-tenggara">
                         {% for cal_date in mini_cal %}
                         {% if cal_date[0] == month.strftime('%d')%}
                         <a style="font-weight: bold;color:#614F41" class="isian-index-bawah-samping"  href="#{{cal_date[0]}}-{{cal_date[9]}}-day-overview">{{cal_date[0]}}</a>
@@ -33,7 +34,6 @@
                         {% endif %}
                         {% endfor %}
                     </div>
-                </div>
             </div>
 
         </div>

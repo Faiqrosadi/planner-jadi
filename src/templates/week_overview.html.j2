@@ -26,16 +26,19 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="kolom-overview">
-                <div style="padding-top: 13px;" class="kiri-week-overview "></div>
-                <div>
-                    <div class="kanan-week-overview"></div>
-                    <div class="index-tenggara">
+            <div class="checkin-container">
+                <div class="whole-overview"></div>
+            </div>
+            <div class="kolom-checkin">
+                <div class="index-tenggara">
                         {% for cal_date in mini_cal %}
-                        <a class="isian-index-bawah-samping"  href="#{{cal_date[0]}}-{{cal_date[9]}}-day-overview">{{cal_date[0]}}</a>
+                        {% if cal_date[0] == month.strftime('%d')%}
+                        <a style="font-weight: bold;color:#614F41" class="isian-index-bawah-samping"  href="#{{cal_date[0]}}-{{cal_date[9]}}-day-overview">{{cal_date[0]}}</a>
+                        {% else %}
+                        <a class="isian-index-bawah-samping"  href="#{{cal_date[0]}}-{{cal_date[9]}}-day-checkin">{{cal_date[0]}}</a>
+                        {% endif %}
                         {% endfor %}
                     </div>
-                </div>
             </div>
 
         </div>

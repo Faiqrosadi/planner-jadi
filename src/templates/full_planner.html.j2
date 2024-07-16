@@ -180,22 +180,24 @@
                 });
         });
 
-        document.querySelectorAll('.atas-checkin').forEach(icon => {
-            fetch('components/atas-checkin.svg')
+        document.querySelectorAll('.whole-overview').forEach(icon => {
+            fetch('components/whole-overview.svg')
                 .then(response => response.text())
                 .then(svg => {
                     icon.innerHTML = svg;
                 });
         });
-        document.querySelectorAll('.kanan-checkin').forEach(icon => {
-            fetch('components/kanan-checkin.svg')
+
+        document.querySelectorAll('.whole-week-overview').forEach(icon => {
+            fetch('components/whole-week-overview.svg')
                 .then(response => response.text())
                 .then(svg => {
                     icon.innerHTML = svg;
                 });
         });
-        document.querySelectorAll('.kiri-checkin').forEach(icon => {
-            fetch('components/kiri-checkin.svg')
+
+        document.querySelectorAll('.whole-checkin').forEach(icon => {
+            fetch('components/whole-checkin.svg')
                 .then(response => response.text())
                 .then(svg => {
                     icon.innerHTML = svg;
