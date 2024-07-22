@@ -59,36 +59,44 @@
   {% for sidebar_bulan in sidebar_bulan_list %}
   {% if date %}
     {% if sidebar_bulan[0][7] == date.strftime('%b').upper() %}
- <a style="margin-left: -0.85px;z-index:999" class="svg-baru-banget" href="#{{sidebar_bulan[0][8]}}-month-overview">
-        <div class="grid-baru">
-            <div  class="layer1 flex items-center">
-                <div style="border: 1px solid red;" class="kotak-aktif sidebar-cont"></div>
+    <a style="z-index:999" class="svg-baru-banget" href="#{{sidebar_bulan[0][8]}}-month-overview">
+      <div class="grid-baru">
+          <div  class="layer1 kotak-aktif-container">
+            <div class="kotak-aktif sidebar-cont"></div>
+          </div>
+          <div class="layer2 flex items-center">
+            <div class="sidebar-text">
+            <div style="color:#614F41; font-size:7.72px;">{{sidebar_bulan[0][7]}}</div>
             </div>
-            <div class="layer2 flex items-center">
-              <div class="sidebar-text">
-                  <div style="color:#614F41; font-size:7.72px;">{{sidebar_bulan[0][7]}}</div>
-              </div>
-            </div>
-        </div>
+          </div>
+      </div>
     </a>
   {% else %}
     <a style="z-index:{{13 - loop.index}}" class="svg-baru-banget" href="#{{sidebar_bulan[0][8]}}-month-overview">
-        <div class="layer1 flex items-center"><div class="kotak-non-aktif sidebar-cont"></div></div>
-        <div class="layer2 flex items-center">
+        <div class="grid-baru">
+          <div  class="layer1 flex kotak-aktif-container">
+            <div class="kotak-non-aktif sidebar-cont"></div>
+          </div>
+          <div class="layer2 flex items-center">
             <div class="sidebar-text">
-                <div style="color:#A0907F; font-size:7.72px;text-align:center">{{sidebar_bulan[0][7]}}</div>
+            <div style="color:#A0907F; font-size:7.72px;">{{sidebar_bulan[0][7]}}</div>
             </div>
-        </div>
+          </div>
+      </div>
     </a>
   {% endif %}
   {% else %}
     <a style="z-index:{{13 - loop.index}}" class="svg-baru-banget" href="#{{sidebar_bulan[0][8]}}-month-overview">
-        <div class="layer1 flex items-center"><div class="kotak-non-aktif sidebar-cont"></div></div>
-        <div class="layer2 flex items-center">
+        <div class="grid-baru">
+          <div  class="layer1 kotak-aktif-container">
+            <div class="kotak-non-aktif"></div>
+          </div>
+          <div class="layer2 flex items-center">
             <div class="sidebar-text">
-                <div style="color:#A0907F; font-size:7.72px;text-align:center">{{sidebar_bulan[0][7]}}</div>
+            <div style="color:#A0907F; font-size:7.72px;">{{sidebar_bulan[0][7]}}</div>
             </div>
-        </div>
+          </div>
+      </div>
     </a>
   {% endif%}
   {% endfor %}

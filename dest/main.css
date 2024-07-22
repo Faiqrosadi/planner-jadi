@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.5 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -617,6 +617,11 @@ h2 {
   gap: 0px 0px;
 }
 
+.kotak-aktif-container {
+  display: -webkit-flex;
+  align-items: center;
+}
+
 .column-sidebar {
   width: 17.43px;
   position: relative;
@@ -1033,6 +1038,16 @@ h2 {
   /* Maintain aspect ratio */
 }
 
+.checkin-container2 {
+  margin-top: 22px;
+  width: 100%;
+  /* Adjust width as needed */
+  max-width: 400px;
+  /* Maximum width of the container */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
 .checkin2-container {
   margin-top: 45px;
   width: 100%;
@@ -1094,21 +1109,30 @@ h2 {
 }
 
 .kotak-aktif {
-  position: relative;
-  width: 100%;
+  width: 15.44px;
   height: 73.36px;
-  background-color: green;
+  border-radius: 0 30px 30px 0;
+  position: relative;
+  background-color: #f8f6ef;
+  box-shadow: 1.54px 0.39px 1.54px rgba(0, 0, 0, 0.1);
 }
 
 .kotak-non-aktif {
+  width: 15.44px;
+  height: 73.36px;
+  background-color: #eae0d6;
+  border-radius: 0 30px 30px 0;
   position: relative;
-  width: 73.36px;
-  height: 15.44px;
-  background-color: orange;
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0) 85%,
+      rgba(0, 0, 0, 0.2) 99%
+    );
+  box-shadow: 1.54px 0.39px 1.54px rgba(0, 0, 0, 0.1);
 }
 
 .svg-baru-banget {
-  margin-top: 62.5px;
+  margin-top: 28.5px;
 }
 
 .grid-baru {
