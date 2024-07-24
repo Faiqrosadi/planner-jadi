@@ -7,17 +7,17 @@
                     </div>
                 </div>
                 <div class="index-kolom2">
-                    <a style="font-weight: bold;" class="isian-index-kolom3" href="#{{month.strftime('%d-%m')}}-day-overview">
+                    <a style="font-weight: bold;" class="isian-index-kolom3" href="#{{month.strftime('%d')}}-{{mini_cal[0][9]}}-day-overview">
                         OVERVIEW
                     </a>
                     <div class="
                         isian-index-kolom3">|</div>
                     <a class="
-                        isian-index-kolom3" href="#{{month.strftime('%d-%m')}}-day-checkin">CHECK-IN</a>
+                        isian-index-kolom3" href="#{{month.strftime('%d')}}-{{mini_cal[0][9]}}-day-checkin">CHECK-IN</a>
                 </div>
                 <div class="index-kolom5">
                     {% for i in range(5)%}
-                    <a class="isian-index-kolom5" href="#W{{loop.index}}-{{ month.strftime('%B').lower()}}-week-overview">W{{loop.index}}</a>
+                    <a class="isian-index-kolom5" href="#W{{loop.index}}-{{mini_cal[0][8]}}-week-overview">W{{loop.index}}</a>
                     {% endfor %}
                 </div>
             </div>

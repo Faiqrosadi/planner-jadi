@@ -97,7 +97,7 @@
   .kotak-non {
     width: 15.44px;
     height: 73.36px;
-    background-color: #ECECEC;
+    background-color: #F8F8F8;
     border-radius: 0px 30px 30px 0px;
   }
   .kotak-ak {
@@ -382,7 +382,7 @@
   .others-link-container {
     width: 44px;
     height: 20px;
-    background-color: #ECECEC;
+    background-color: #F8F8F8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -391,7 +391,7 @@
   .yearly-link-container {
     width: 68;
     height: 20px;
-    background-color: #ECECEC;
+    background-color: #F8F8F8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -538,7 +538,7 @@
     padding-top: 2px;
     padding-bottom: 2px;
 
-    background-color: #ECECEC;
+    background-color: #F8F8F8;
 
     text-align: center;
     justify-content: center;
@@ -549,7 +549,7 @@
     display: flex;
     width: 145px;
     height: auto;
-    background-color: #ECECEC;
+    background-color: #F8F8F8;
     align-items: center;
   }
 
@@ -566,7 +566,7 @@
   .month-reflection-container {
     height: 150px;
     padding-top: 9px;
-    background-color: #ECECEC;
+    background-color: #F8F8F8;
     border-top: 1px solid #333333;
   }
 
@@ -673,21 +673,21 @@
     width: 100%;
     height: 75px;
     border-radius: 0 30px 30px 0;
-    border-right: 0px solid #484848;  /* Left border */
-    border-top: 0.5px solid #484848;   /* Top border */
-    border-bottom: 2px solid #484848; /* Right border */
-    border-left: 0px solid #484848;
+    border-right: 0px solid #EFEFEF;  /* Left border */
+    border-top: 0.5px solid #EFEFEF;   /* Top border */
+    border-bottom: 2px solid #EFEFEF; /* Right border */
+    border-left: 0px solid #EFEFEF;
     position: relative;
     background-color: #FFFFFF;
   }
   .kotak-non-aktif {
     width: 100%;
     height: 75px;
-    border-right: 0px solid #484848;  /* Left border */
-    border-top: 0.5px solid #484848;   /* Top border */
-    border-bottom: 2px solid #484848; /* Right border */
-    border-left: 1px solid #484848;
-    background-color: #535455;
+    border-right: 0px solid #EFEFEF;  /* Left border */
+    border-top: 0.5px solid #EFEFEF;   /* Top border */
+    border-bottom: 2px solid #EFEFEF; /* Right border */
+    border-left: 1px solid #EFEFEF;
+    background-color: #FFFFFF;
     border-radius: 0 30px 30px 0;
     position: relative;
   }
