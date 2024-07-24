@@ -19,7 +19,7 @@
                 <div class="index-kolom5">
                     {% for i in range(5)%}
                     {%if (iter+1) == (loop.index)%}
-                    <a style="font-weight: bold;color:#626463" class="isian-index-kolom5" href="#W{{loop.index}}-{{ month.strftime('%B').lower()}}-week-overview">W{{loop.index}}</a>
+                    <a style="font-weight: bold;color:#333333" class="isian-index-kolom5" href="#W{{loop.index}}-{{ month.strftime('%B').lower()}}-week-overview">W{{loop.index}}</a>
                     {% else %}
                     <a class="isian-index-kolom5" href="#W{{loop.index}}-{{ month.strftime('%B').lower()}}-week-overview">W{{loop.index}}</a>
                     {% endif %}
@@ -33,7 +33,7 @@
                 <div class="index-tenggara">
                         {% for cal_date in mini_cal %}
                         {% if cal_date[0] == month.strftime('%d')%}
-                        <a style="font-weight: bold;color:#626463" class="isian-index-bawah-samping"  href="#{{cal_date[0]}}-{{cal_date[9]}}-day-overview">{{cal_date[0]}}</a>
+                        <a style="font-weight: bold;color:#333333" class="isian-index-bawah-samping"  href="#{{cal_date[0]}}-{{cal_date[9]}}-day-overview">{{cal_date[0]}}</a>
                         {% else %}
                         <a class="isian-index-bawah-samping"  href="#{{cal_date[0]}}-{{cal_date[9]}}-day-overview">{{cal_date[0]}}</a>
                         {% endif %}

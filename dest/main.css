@@ -451,7 +451,7 @@ h1 {
   font-family: Roundark, sans-serif;
   letter-spacing: 0.05em;
   font-weight: 400;
-  color: #626463;
+  color: #333333;
   font-size: 28.53px;
 }
 
@@ -460,7 +460,7 @@ h2 {
   font-family: Roundark, sans-serif;
   letter-spacing: 0.05em;
   font-weight: 400;
-  color: #626463;
+  color: #333333;
   font-size: 11.58px;
 }
 
@@ -636,7 +636,7 @@ h2 {
 
 .divider {
   width: 100%;
-  border-top: 1px solid #626463;
+  border-top: 1px solid #333333;
   /* Adjust the color and width as needed */
   margin-top: 5px;
 }
@@ -689,7 +689,7 @@ h2 {
 .vision-edisibulan-element {
   font-weight: 400;
   font-size: 7.5px;
-  color: #a0907f;
+  color: #9A9A9A;
   font-family: "Action Sans", sans-serif;
   text-align: left;
   letter-spacing: 0.05em;
@@ -705,7 +705,7 @@ h2 {
 .month-hyperlink-horizontal-element {
   font-weight: 400;
   font-size: 7.5px;
-  color: #a0907f;
+  color: #9A9A9A;
   font-family: "Action Sans", sans-serif;
   text-align: center;
   letter-spacing: 0.05em;
@@ -714,7 +714,7 @@ h2 {
 .project-container {
   width: 100%;
   height: 16px;
-  border-bottom: 0.5px solid #a0907f;
+  border-bottom: 0.5px solid #9A9A9A;
   display: flex;
   align-items: center;
 }
@@ -804,7 +804,7 @@ h2 {
 .others-link-container {
   width: 44px;
   height: 20px;
-  background-color: #F1F1F1;
+  background-color: #ECECEC;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -813,7 +813,7 @@ h2 {
 .yearly-link-container {
   width: 68;
   height: 20px;
-  background-color: #F1F1F1;
+  background-color: #ECECEC;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -821,7 +821,7 @@ h2 {
 
 .regular-index {
   font-size: 6.66px;
-  color: #626463;
+  color: #333333;
   text-align: center;
   font-family: "Action Sans";
   letter-spacing: 0.05em;
@@ -830,14 +830,14 @@ h2 {
 .font-calendar-week {
   font-weight: bold;
   font-size: 8.22px;
-  color: #626463;
+  color: #333333;
   font-family: "Action Sans", sans-serif;
 }
 
 .font-calendar-isian {
   font-weight: normal;
   font-size: 8.22px;
-  color: #626463;
+  color: #333333;
   font-family: "Action Sans", sans-serif;
 }
 
@@ -846,7 +846,7 @@ h2 {
   font-family: Roundark, sans-serif;
   letter-spacing: 0.05em;
   font-weight: 400;
-  color: #626463;
+  color: #333333;
   font-size: 15px;
 }
 
@@ -854,7 +854,7 @@ h2 {
   margin-top: -10px;
   font-weight: medium;
   font-size: 14px;
-  color: #626463;
+  color: #333333;
   font-family: "Action Sans", sans-serif;
   text-align: center;
   letter-spacing: 0.1em;
@@ -864,14 +864,14 @@ h2 {
   margin-top: 10px;
   width: 551px;
   height: 666px;
-  border: 1px solid #626463;
+  border: 1px solid #333333;
 }
 
 .vision-board-month-container {
   margin-top: 37px;
   width: 100%;
   height: 666px;
-  border: 1px solid #626463;
+  border: 1px solid #333333;
   padding-right: 7px;
   padding-left: 7px;
 }
@@ -888,7 +888,7 @@ h2 {
 .isian-index-kolom1 {
   font-weight: bold;
   font-size: 7.72px;
-  color: #626463;
+  color: #333333;
   font-family: "Action Sans", sans-serif;
   text-align: left;
 }
@@ -896,7 +896,7 @@ h2 {
 .isian-index-kolom3 {
   font-weight: normal;
   font-size: 7.72px;
-  color: #626463;
+  color: #333333;
   font-family: "Action Sans", sans-serif;
   text-align: center;
 }
@@ -904,7 +904,7 @@ h2 {
 .isian-index-kolom5 {
   font-weight: normal;
   font-size: 7.72px;
-  color: #a0907f;
+  color: #9A9A9A;
   font-family: "Action Sans", sans-serif;
   text-align: right;
 }
@@ -912,7 +912,7 @@ h2 {
 .isian-index-bawah {
   font-weight: normal;
   font-size: 7.72px;
-  color: #626463;
+  color: #333333;
   font-family: "Action Sans", sans-serif;
   text-align: center;
   letter-spacing: 0.05em;
@@ -921,7 +921,7 @@ h2 {
 .isian-index-bawah-samping {
   font-weight: normal;
   font-size: 7.72px;
-  color: #a0907f;
+  color: #9A9A9A;
   font-family: "Action Sans", sans-serif;
   text-align: center;
   letter-spacing: 0.05em;
@@ -959,7 +959,7 @@ h2 {
   padding-right: 4.73px;
   padding-top: 2px;
   padding-bottom: 2px;
-  background-color: #F1F1F1;
+  background-color: #ECECEC;
   text-align: center;
   justify-content: center;
 }
@@ -969,7 +969,7 @@ h2 {
   display: flex;
   width: 145px;
   height: auto;
-  background-color: #F1F1F1;
+  background-color: #ECECEC;
   align-items: center;
 }
 
@@ -986,8 +986,8 @@ h2 {
 .month-reflection-container {
   height: 150px;
   padding-top: 9px;
-  background-color: #F1F1F1;
-  border-top: 1px solid #626463;
+  background-color: #ECECEC;
+  border-top: 1px solid #333333;
 }
 
 .index-kolom5 {
@@ -1007,7 +1007,7 @@ h2 {
 .footer-teks {
   font-weight: medium;
   font-size: 4.55px;
-  color: #626463;
+  color: #333333;
   font-family: "Action Sans", sans-serif;
   text-align: center;
   letter-spacing: 0.05em;
@@ -1107,13 +1107,13 @@ h2 {
   width: 100%;
   height: 75px;
   border-radius: 0 30px 30px 0;
-  border-right: 0px solid #CBCBCB;
+  border-right: 0px solid #484848;
   /* Left border */
-  border-top: 0.5px solid #CBCBCB;
+  border-top: 0.5px solid #484848;
   /* Top border */
-  border-bottom: 2px solid #CBCBCB;
+  border-bottom: 2px solid #484848;
   /* Right border */
-  border-left: 0px solid #CBCBCB;
+  border-left: 0px solid #484848;
   position: relative;
   background-color: #FFFFFF;
 }
@@ -1121,14 +1121,14 @@ h2 {
 .kotak-non-aktif {
   width: 100%;
   height: 75px;
-  border-right: 0px solid #CBCBCB;
+  border-right: 0px solid #484848;
   /* Left border */
-  border-top: 0.5px solid #CBCBCB;
+  border-top: 0.5px solid #484848;
   /* Top border */
-  border-bottom: 2px solid #CBCBCB;
+  border-bottom: 2px solid #484848;
   /* Right border */
-  border-left: 1px solid #CBCBCB;
-  background-color: #DEDEDE;
+  border-left: 1px solid #484848;
+  background-color: #535455;
   border-radius: 0 30px 30px 0;
   position: relative;
 }
