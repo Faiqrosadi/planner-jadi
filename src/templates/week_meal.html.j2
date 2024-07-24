@@ -19,7 +19,7 @@
                 <div class="index-kolom5">
                     {% for i in range(5)%}
                     {%if (iter+1) == (loop.index)%}
-                    <a style="font-weight: bold;color:#614F41" class="isian-index-kolom5" href="#W{{loop.index}}-{{ month.strftime('%B').lower()}}-week-overview">W{{loop.index}}</a>
+                    <a style="font-weight: bold;color:#626463" class="isian-index-kolom5" href="#W{{loop.index}}-{{ month.strftime('%B').lower()}}-week-overview">W{{loop.index}}</a>
                     {% else %}
                     <a class="isian-index-kolom5" href="#W{{loop.index}}-{{ month.strftime('%B').lower()}}-week-overview">W{{loop.index}}</a>
                     {% endif %}

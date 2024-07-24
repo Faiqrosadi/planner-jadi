@@ -12,25 +12,25 @@
   h1 {
     @apply font-roundark text-center tracking-5;
     font-weight: 400;
-    color: #614f41;
+    color: #626463;
     font-size: 28.53px;
   }
   h2 {
     @apply font-roundark text-center tracking-5;
     font-weight: 400;
-    color: #614f41;
+    color: #626463;
     font-size: 11.58px;
   }
 }
 
 @layer components {
   .letter-page {
-    @apply bg-[#F8F6F1] overflow-hidden flex;
+    @apply bg-[#FFFFFF] overflow-hidden flex;
     width: 612px;
     height: 792px;
   }
   .letter-page-margined {
-    @apply bg-[#F8F6F1] overflow-hidden flex;
+    @apply bg-[#FFFFFF] overflow-hidden flex;
     margin-left: 19px;
     margin-right: 19px;
     width: 612px;
@@ -97,13 +97,13 @@
   .kotak-non {
     width: 15.44px;
     height: 73.36px;
-    background-color: #f1ebe5;
+    background-color: #F1F1F1;
     border-radius: 0px 30px 30px 0px;
   }
   .kotak-ak {
     width: 15.44px;
     height: 73.36px;
-    background-color: #f8f6ef;
+    background-color: #FFFFFF;
     border-radius: 0px 30px 30px 0px;
   }
   .svg-item:nth-child(2) {
@@ -194,7 +194,7 @@
 
   .divider {
     width: 100%;
-    border-top: 1px solid #614f41; /* Adjust the color and width as needed */
+    border-top: 1px solid #626463; /* Adjust the color and width as needed */
     margin-top: 5px;
   }
 
@@ -382,7 +382,7 @@
   .others-link-container {
     width: 44px;
     height: 20px;
-    background-color: #f1ebe5;
+    background-color: #F1F1F1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -391,7 +391,7 @@
   .yearly-link-container {
     width: 68;
     height: 20px;
-    background-color: #f1ebe5;
+    background-color: #F1F1F1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -399,7 +399,7 @@
 
   .regular-index {
     font-size: 6.66px;
-    color: #614f41;
+    color: #626463;
     text-align: center;
     font-family: "Action Sans";
     @apply tracking-5;
@@ -414,21 +414,21 @@
   .font-calendar-week {
     font-weight: bold;
     font-size: 8.22px;
-    color: #614f41;
+    color: #626463;
     font-family: "Action Sans", sans-serif;
   }
 
   .font-calendar-isian {
     font-weight: normal;
     font-size: 8.22px;
-    color: #614f41;
+    color: #626463;
     font-family: "Action Sans", sans-serif;
   }
 
   .judul-calendar-month {
     @apply font-roundark text-center tracking-5;
     font-weight: 400;
-    color: #614f41;
+    color: #626463;
     font-size: 15px;
   }
 
@@ -436,7 +436,7 @@
     margin-top: -10px;
     font-weight: medium;
     font-size: 14px;
-    color: #614f41;
+    color: #626463;
     font-family: "Action Sans", sans-serif;
     @apply text-center tracking-10;
   }
@@ -445,14 +445,14 @@
     margin-top: 10px;
     width: 551px;
     height: 666px;
-    border: 1px solid #614f41;
+    border: 1px solid #626463;
   }
 
   .vision-board-month-container {
     margin-top: 37px;
     width: 100%;
     height: 666px;
-    border: 1px solid #614f41;
+    border: 1px solid #626463;
     padding-right: 7px;
     padding-left: 7px;
   }
@@ -469,14 +469,14 @@
   .isian-index-kolom1 {
     font-weight: bold;
     font-size: 7.72px;
-    color: #614f41;
+    color: #626463;
     font-family: "Action Sans", sans-serif;
     @apply text-left;
   }
   .isian-index-kolom3 {
     font-weight: normal;
     font-size: 7.72px;
-    color: #614f41;
+    color: #626463;
     font-family: "Action Sans", sans-serif;
     @apply text-center;
   }
@@ -492,7 +492,7 @@
   .isian-index-bawah {
     font-weight: normal;
     font-size: 7.72px;
-    color: #614f41;
+    color: #626463;
     font-family: "Action Sans", sans-serif;
     @apply text-center tracking-5;
   }
@@ -538,7 +538,7 @@
     padding-top: 2px;
     padding-bottom: 2px;
 
-    background-color: #f1ebe5;
+    background-color: #F1F1F1;
 
     text-align: center;
     justify-content: center;
@@ -549,7 +549,7 @@
     display: flex;
     width: 145px;
     height: auto;
-    background-color: #f1ebe5;
+    background-color: #F1F1F1;
     align-items: center;
   }
 
@@ -566,8 +566,8 @@
   .month-reflection-container {
     height: 150px;
     padding-top: 9px;
-    background-color: #f1ebe5;
-    border-top: 1px solid #614f41;
+    background-color: #F1F1F1;
+    border-top: 1px solid #626463;
   }
 
   .index-kolom5 {
@@ -586,7 +586,7 @@
   .footer-teks {
     font-weight: medium;
     font-size: 4.55px;
-    color: #614f41;
+    color: #626463;
     font-family: "Action Sans", sans-serif;
     @apply text-center tracking-5;
   }
@@ -673,21 +673,21 @@
     width: 100%;
     height: 75px;
     border-radius: 0 30px 30px 0;
-    border-right: 0px solid #E0D2C4;  /* Left border */
-    border-top: 0.5px solid #E0D2C4;   /* Top border */
-    border-bottom: 2px solid #E0D2C4; /* Right border */
-    border-left: 0px solid #E0D2C4;
+    border-right: 0px solid #CBCBCB;  /* Left border */
+    border-top: 0.5px solid #CBCBCB;   /* Top border */
+    border-bottom: 2px solid #CBCBCB; /* Right border */
+    border-left: 0px solid #CBCBCB;
     position: relative;
-    background-color: #f8f6ef;
+    background-color: #FFFFFF;
   }
   .kotak-non-aktif {
     width: 100%;
     height: 75px;
-    border-right: 0px solid #E0D2C4;  /* Left border */
-    border-top: 0.5px solid #E0D2C4;   /* Top border */
-    border-bottom: 2px solid #E0D2C4; /* Right border */
-    border-left: 1px solid #E0D2C4;
-    background-color: #eae0d6;
+    border-right: 0px solid #CBCBCB;  /* Left border */
+    border-top: 0.5px solid #CBCBCB;   /* Top border */
+    border-bottom: 2px solid #CBCBCB; /* Right border */
+    border-left: 1px solid #CBCBCB;
+    background-color: #DEDEDE;
     border-radius: 0 30px 30px 0;
     position: relative;
   }
